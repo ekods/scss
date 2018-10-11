@@ -4,28 +4,60 @@
 
 
 //Setting GLOBAL
-$font-strack:     Helvetica, sans-serif;
-$primary-color:   #333;
-$line-height:     1.4;
+$font-strack:         Helvetica, sans-serif;
+$line-height:         1.4;
 
-//Color
-$f-white:         #fff;
-$f-red:           red;
-$f-blue:          blue;
+
+// Fonts
+$serif:               "Lora", "Playfair Display", Georgia, serif;
+$sans-serif:          "Roboto", "Source Sans Pro", "Open Sans", Arial, sans-serif;
+
+
+// Colors
+$white:               #fff;
+$black:               #000;
+$yellow:              #fce473;
+$pink:                #c71585;
+$green:               #32cd32;
+$blue:                #1d90ff;
+$grey:                grey;
+
+$primary-color:       $grey;
+$secondary-color:     $yellow;
+
 
 //Margin
-$margin-auto:     auto;
+$margin-auto:         auto;
+
 
 //Padding
-$padding-20:      20px;
+$padding-20:          20px;
 
 
 //Size
-$size-container:  800px;
+$size-container:      800px;
 
 
 //Width
-$width:         100%;
+$width:               100%;
+
+
+//Radius
+$radius:              5px;
+
+
+//Button Setting
+.btn {
+  border-radius:      $radius;
+  border-color:       $grey;
+  background:         $primary-color;
+  color:              $white;
+  &:hover {
+    color:            $primary-color;
+    background:       $white;
+  }
+}
+
 
 
 * {
@@ -45,8 +77,6 @@ input, textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
 }
-
-:focus { outline: none !important; }
 
 
 //Typografi
@@ -138,6 +168,24 @@ p, .title {
   margin-right: -20px;
 }
 
+@mixin d-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin d-table {
+  display: table;
+}
+
+@mixin d-inlinetable {
+  display: inline-table;
+}
+
+
+
+
 .row {
   @include row;
 }
@@ -175,4 +223,47 @@ img {
   width: $width / 4;
   padding: $padding-20;
   float: left;
+}
+
+
+/*---------
+== HEADER
+---------*/
+header {
+
+}
+
+
+
+
+
+
+/*---------
+== FOOTER
+---------*/
+
+footer {
+
+}
+
+
+
+
+
+/*---------
+== RESPONSIVE
+---------*/
+
+@media screen and (max-width:900px) {
+
+}
+
+
+@media screen and (max-width:768px) {
+
+}
+
+
+@media screen and (max-width:420px) {
+
 }
