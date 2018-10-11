@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//scss
+$margin-auto:     auto;
+$padding-20:      20px;
+$size-container:  800px;
+$width-2:         100%;
+
+
+
+@mixin row {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.row {
+  @include row;
+}
+
+.container {
+  width: 100%;
+  max-width: $size-container;
+  margin: $margin-auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.item-2 {
+  width: $width-2 / 2;
+  padding: $padding-20;
+  float: left;
+}
+
+.item-3 {
+  width: $width-2 / 3;
+  padding: $padding-20;
+  float: left;
+}
