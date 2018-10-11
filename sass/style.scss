@@ -78,6 +78,9 @@ input, textarea {
   -webkit-border-radius: 0;
 }
 
+.clear {
+  clear: both;
+}
 
 //Typografi
 h1 {
@@ -219,8 +222,20 @@ img {
   float: left;
 }
 
-.item-3 {
+.item-4 {
   width: $width / 4;
+  padding: $padding-20;
+  float: left;
+}
+
+.item-5 {
+  width: $width / 5;
+  padding: $padding-20;
+  float: left;
+}
+
+.item-6 {
+  width: $width / 6;
   padding: $padding-20;
   float: left;
 }
@@ -249,21 +264,34 @@ footer {
 
 
 
-
 /*---------
 == RESPONSIVE
 ---------*/
 
 @media screen and (max-width:900px) {
-
+  .item-5
+  .item-6 {
+    width: $width / 4;
+  }
 }
 
 
 @media screen and (max-width:768px) {
-
+  .item-4,
+  .item-5,
+  .item-6 {
+    width: $width / 2;
+  }
 }
 
 
 @media screen and (max-width:420px) {
-
+  .item-1
+  .item-2,
+  .item-3,
+  .item-4,
+  .item-5,
+  .item-6 {
+    width: $width;
+  }
 }
