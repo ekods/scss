@@ -1,16 +1,137 @@
+/*------------------------------------
+  Create by Eko Dwi Saputro
+------------------------------------*/
+
+
+//Setting GLOBAL
+$font-strack:     Helvetica, sans-serif;
+$primary-color:   #333;
+$line-height:     1.4;
+
+//Color
+$f-white:         #fff;
+$f-red:           red;
+$f-blue:          blue;
+
+//Margin
+$margin-auto:     auto;
+
+//Padding
+$padding-20:      20px;
+
+
+//Size
+$size-container:  800px;
+
+
+//Width
+$width:         100%;
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font-strack;
+  color: $primary-color;
+  line-height: $line-height;
 }
 
-//scss
-$margin-auto:     auto;
-$padding-20:      20px;
-$size-container:  800px;
-$width-2:         100%;
+*:focus {
+    outline: none;
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+:focus { outline: none !important; }
 
 
+//Typografi
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+p, .title {
+  font-size: 16px;
+}
+
+
+.extrabold {
+  font-weight: 800;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.light {
+  font-weight: 300;
+}
+
+
+.underline {
+  text-decoration: underline;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+//Align
+
+.aligncenter {
+  text-align: center;
+}
+
+.alignleft {
+  text-align: left;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.alignjustify {
+  text-align: justify;
+}
+
+
+/*---------
+== MIXIN
+---------*/
 
 @mixin row {
   margin-left: -20px;
@@ -25,20 +146,33 @@ $width-2:         100%;
   width: 100%;
   max-width: $size-container;
   margin: $margin-auto;
-  img {
-    width: 100%;
-    height: auto;
-  }
+}
+
+img {
+  width: $width;
+  height: auto;
+}
+
+.item-1 {
+  width: $width;
+  padding: $padding-20;
+  float: left;
 }
 
 .item-2 {
-  width: $width-2 / 2;
+  width: $width / 2;
   padding: $padding-20;
   float: left;
 }
 
 .item-3 {
-  width: $width-2 / 3;
+  width: $width / 3;
+  padding: $padding-20;
+  float: left;
+}
+
+.item-3 {
+  width: $width / 4;
   padding: $padding-20;
   float: left;
 }
